@@ -1,0 +1,8 @@
+[package]
+name = "jak"
+version = "0.1.0"
+authors = ["Graham Brooks <graham@grahambrooks.com>"]
+edition = "2018"
+
+[dependencies]
+clap = "~2.27.0"
