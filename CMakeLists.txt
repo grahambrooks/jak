@@ -11,8 +11,8 @@ find_package(Threads REQUIRED)
 find_package(OpenSSL REQUIRED)
 find_package(cpprestsdk REQUIRED)
 
-add_executable(jak-cli src/main.cpp src/GitHub.cpp src/GitHub.h src/CommandLineParser.cpp src/CommandLineParser.h src/source.h src/app_config.h)
+add_executable(jak-cli src/main.cpp src/GitHub.cpp src/GitHub.h src/CommandLineParser.cpp src/CommandLineParser.h src/source.h src/app_config.h src/app.h)
 target_link_libraries(${PROJECT_NAME} PRIVATE cpprestsdk::cpprest ${Boost_LIBRARIES})
 
-add_executable(jak-cli-test src/CommandLineParser.cpp src/CommandLineParser.h src/CommandLineParserTests.cpp src/test_main.cpp src/config_reader_tests.cpp src/config_reader.h)
+add_executable(jak-cli-test src/CommandLineParser.cpp src/CommandLineParser.h src/CommandLineParserTests.cpp src/test_main.cpp src/config_reader_tests.cpp src/config_reader.h src/app.h)
 target_link_libraries(jak-cli-test PRIVATE cpprestsdk::cpprest ${Boost_LIBRARIES})
